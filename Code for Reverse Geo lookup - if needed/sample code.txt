@@ -1,0 +1,14 @@
+import geocoder
+
+combined_dataset=[]
+
+#get the address fields in one line
+loop = df['Addr_full']
+
+for x in loop:
+
+    g = geocoder.google(x, sensor=False,key='YOUR GOOGLE API KEY HERE')
+
+    #g.latlng
+
+    combined_dataset.append(g.latlng)
